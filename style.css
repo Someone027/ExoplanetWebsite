@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #080b14;
+
+    color: #f2f4ff;
+
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    width: 85%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 0 45px;
+}
+
+
+.label {
+    color: #8993b3;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+header h1 {
+    font-size: 48px;
+
+    margin-bottom: 12px;
+}
+
+
+.subtitle {
+    color: #aeb5c9;
+
+    font-size: 16px;
+}
+
+
+/* MAIN */
+
+main {
+    width: 85%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* EXPLORER */
+
+.explorer {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 20px;
+}
+
+
+/* CARDS */
+
+.input-card,
+.result-card,
+.about {
+    background: #111624;
+
+    border: 1px solid #292f45;
+
+    border-radius: 14px;
+}
+
+
+/* INPUT CARD */
+
+.input-card {
+    padding: 28px;
+}
+
+
+.input-card h2 {
+    font-size: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+label {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #b6bdd0;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+
+label span {
+    color: #69728d;
+}
+
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #343b56;
+
+    border-radius: 7px;
+
+    background: #080b14;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+input:focus {
+    outline: none;
+
+    border-color: #8994b8;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #e9ebf5;
+
+    color: #0b0e17;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 3px;
+}
+
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* ERROR */
+
+#error {
+    color: #d18d8d;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+}
+
+
+/* RESULT CARD */
+
+.result-card {
+    padding: 28px;
+}
+
+
+.result-card h2 {
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+
+/* PLANET */
+
+.planet-container {
+    height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+#planet {
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: #6875a5;
+
+    box-shadow:
+        0 0 25px rgba(120, 135, 190, 0.25);
+
+    transition:
+        width 0.5s ease,
+        height 0.5s ease;
+}
+
+
+.planet-container span {
+    color: #6f7892;
+
+    font-size: 11px;
+}
+
+
+/* STATS */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.stats > div {
+    background: #080b14;
+
+    border-radius: 8px;
+
+    padding: 15px;
+}
+
+
+.stats p {
+    color: #707993;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+
+.stats strong {
+    display: block;
+
+    font-size: 20px;
+}
+
+
+.stats small {
+    color: #69728d;
+
+    font-size: 10px;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+    margin-top: 15px;
+
+    padding: 16px;
+
+    border-top: 1px solid #292f45;
+}
+
+
+.description p {
+    color: #aeb5c9;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ABOUT */
+
+.about {
+    margin: 20px 0 50px;
+
+    padding: 25px;
+}
+
+
+.about h2 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.about p {
+    color: #969fb8;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid #202536;
+
+    color: #626b84;
+
+    font-size: 11px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+
+    .explorer {
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+}

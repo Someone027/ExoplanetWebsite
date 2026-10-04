@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <p class="label">ASTRONOMY × COMPUTER SCIENCE</p>
+
+        <h1>Exoplanet Explorer</h1>
+
+        <p class="subtitle">
+            Explore how planets outside our solar system compare with Earth.
+        </p>
+    </header>
+
+
+    <main>
+
+        <section class="explorer">
+
+            <!-- INPUT SECTION -->
+            <div class="input-card">
+
+                <h2>Enter Planet Data</h2>
+
+                <label for="planetName">
+                    Planet Name
+                </label>
+
+                <input
+                    type="text"
+                    id="planetName"
+                    placeholder="Example: Kepler-22b"
+                >
+
+
+                <label for="radius">
+                    Radius
+                    <span>Earth = 1</span>
+                </label>
+
+                <input
+                    type="number"
+                    id="radius"
+                    placeholder="Example: 2.4"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <label for="mass">
+                    Mass
+                    <span>Earth = 1</span>
+                </label>
+
+                <input
+                    type="number"
+                    id="mass"
+                    placeholder="Example: 9.1"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <label for="period">
+                    Orbital Period
+                    <span>days</span>
+                </label>
+
+                <input
+                    type="number"
+                    id="period"
+                    placeholder="Example: 289.9"
+                    min="0"
+                    step="0.1"
+                >
+
+
+                <button onclick="explorePlanet()">
+                    Explore Planet
+                </button>
+
+                <p id="error"></p>
+
+            </div>
+
+
+            <!-- RESULTS SECTION -->
+            <div class="result-card">
+
+                <p class="label">PLANET PROFILE</p>
+
+                <h2 id="resultName">
+                    Your Planet
+                </h2>
+
+
+                <div class="planet-container">
+
+                    <div id="planet"></div>
+
+                    <span>
+                        Planet visualization
+                    </span>
+
+                </div>
+
+
+                <!-- RESULTS -->
+                <div class="stats">
+
+                    <div>
+                        <p>RADIUS</p>
+
+                        <strong id="radiusResult">
+                            --
+                        </strong>
+
+                        <small>
+                            × Earth
+                        </small>
+                    </div>
+
+
+                    <div>
+                        <p>MASS</p>
+
+                        <strong id="massResult">
+                            --
+                        </strong>
+
+                        <small>
+                            × Earth
+                        </small>
+                    </div>
+
+
+                    <div>
+                        <p>ORBIT</p>
+
+                        <strong id="periodResult">
+                            --
+                        </strong>
+
+                        <small>
+                            days
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <!-- INTERPRETATION -->
+                <div class="description">
+
+                    <p id="description">
+                        Enter planetary data to begin exploring.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about">
+
+            <h2>
+                Why Explore Exoplanets?
+            </h2>
+
+            <p>
+                Exoplanets are planets that orbit stars beyond our
+                solar system. Comparing their properties helps scientists
+                investigate how different planetary systems form and evolve.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Built with HTML, CSS & JavaScript
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
